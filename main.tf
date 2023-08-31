@@ -142,7 +142,7 @@ resource "local_file" "private_key_pem" {
 resource "aws_key_pair" "generated" {
   key_name   = var.ssh_key
   public_key = tls_private_key.generated.public_key_openssh
-}
+} 
 
 # EC2 Manve
 resource "aws_instance" "manve_server" {
