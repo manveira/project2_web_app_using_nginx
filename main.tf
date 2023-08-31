@@ -124,6 +124,11 @@ data "aws_ami" "amazon_linux_2" {
     name   = "owner-alias"
     values = ["amazon"]
   }
+  
+  filter {
+    name   = "architecture"
+    values = ["x86_64"]
+  }
 }
 
 # TLS
